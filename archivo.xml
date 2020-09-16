@@ -1,0 +1,28 @@
+<cac:AccountingCustomerParty xmlns:cac="http://www.w3.org/TR/html4/">
+    <cac:Party>
+        <cac:PartyIdentification>
+            <cbc:ID schemeID="6" schemeName="Documento de Identidad" schemeAgencyName="PE:SUNAT" schemeURI="urn:sssss:6">00000000011</cbc:ID>
+        </cac:PartyIdentification>
+        <cac:PartyName>
+            <cbc:Name><![CDATA[MUNICIPALIDAD]]></cbc:Name>
+        </cac:PartyName>
+        <cac:PartyTaxScheme>
+            <cbc:RegistrationName><![CDATA[MUNICIPALIDAD]]></cbc:RegistrationName>
+            <cbc:CompanyID schemeID="6" schemeName="SUNAT:Identificador de Documento de Identidad" schemeAgencyName="PE:SUNAT" schemeURI="urn:sssss:6">00000000011</cbc:CompanyID>
+            <cac:TaxScheme>
+                <cbc:ID schemeID="6" schemeName="SUNAT:Identificador de Documento de Identidad" schemeAgencyName="PE:SUNAT" schemeURI="urn:sssss:6">00000000011</cbc:ID>
+            </cac:TaxScheme>
+        </cac:PartyTaxScheme>
+        <cac:PartyLegalEntity>
+            <cbc:RegistrationName><![CDATA[MUNICIPALIDAD]]></cbc:RegistrationName>
+            <cac:RegistrationAddress>
+                <cac:AddressLine>
+                    <cbc:Line><![CDATA[PZA. PLAZA DE ARMAS]]></cbc:Line>
+                </cac:AddressLine>
+                <cac:Country>
+                    <cbc:IdentificationCode listID="ISO 3166-1" listAgencyName="United Nations Economic Commission for Europe" listName="Country">PE</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:RegistrationAddress>
+        </cac:PartyLegalEntity>
+    </cac:Party>
+</cac:AccountingCustomerParty>

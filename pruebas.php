@@ -6,11 +6,22 @@ if (file_exists($file)) {
     if ($xml === false) {
         die('Error abriendo el archivo XML dentro del ZIP');
     }
-    $name = $xml->xpath('//cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/cbc:ID');
-    //->{'cac:AccountingCustomerParty'}->{'cac:Party'}->{'cac:PartyIdentification'}->{'cbc:ID'};
-    var_export($name);
-    //$name = $xml->{'cac:Party'}->{'cac:PartyIdentification'}->{'cbc:ID'};
-    echo $name[0], PHP_EOL;
+    $name = $xml->xpath(
+        '//cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/cbc:ID'
+    );
+    $name2 = $xml->xpath(
+        '//cac:LegalMonetaryTotal/cbc:PayableAmount'
+    );
+    if (count($name) > 0) {
+        echo 'c:ID = ', $name[0], PHP_EOL;
+    } else {
+        echo 'No c:ID found', PHP_EOL;
+    }
+    if (count($name2) > 0) {
+        echo 'cbc:PayableAmount = ', $name2[0], PHP_EOL;
+    } else {
+        echo 'No cbc:PayableAmount found', PHP_EOL;
+    }
 } else {
     die('Archivo no encontrado');
 }

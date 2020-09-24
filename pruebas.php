@@ -4,7 +4,7 @@ $code = 'archivo';
 if (file_exists($file)) {
     $xml = simplexml_load_file('zip://'. $file .'#'. $code .'.xml');
     if ($xml === false) {
-        die('Error abriendo el archivo XML dentro del ZIP');
+        die('Error opening ZIP');
     }
     $name = $xml->xpath(
         '//cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/cbc:ID'
@@ -23,5 +23,5 @@ if (file_exists($file)) {
         echo 'No cbc:PayableAmount found', PHP_EOL;
     }
 } else {
-    die('Archivo no encontrado');
+    die('File not found');
 }
